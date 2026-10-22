@@ -1,0 +1,217 @@
+.world-artwork {
+  width: 100%;
+  background: #f8f4e9;
+  isolation: isolate;
+}
+
+.world-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 30 / 19;
+}
+
+/* Compact and full scenes use the same viewBox and proportions. */
+.world-artwork-compact {
+  width: 100%;
+}
+
+.world-svg-region {
+  fill: #536274;
+  font-family: var(--sans, Arial, sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+
+.world-svg-problem {
+  fill: #243650;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.world-challenges {
+  display: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px 22px;
+  list-style: none;
+  margin: 0 28px;
+  padding: 16px 0 10px;
+  border-top: 1px solid #ded4b6;
+}
+
+.world-challenge {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.world-challenge-region {
+  color: #536274;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.world-challenge-problem {
+  color: #243650;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.world-artwork-compact .world-svg-labels {
+  display: none;
+}
+
+.world-artwork-compact .world-challenges {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px 20px;
+  margin-inline: 22px;
+  padding-top: 14px;
+}
+
+.world-artwork-compact .world-challenge-problem {
+  font-size: 15px;
+}
+
+.world-connection {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+.world-medallion,
+.world-star-glow,
+.world-star-inner-glow,
+.world-star-core-aura {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.world-star-glow { opacity: 0.48; }
+.world-star-inner-glow { opacity: 0.9; }
+.world-star-rays { opacity: 0.8; }
+
+/* Scene observers stop ambient motion off screen and in a hidden browser tab. */
+.world-particle {
+  stroke-dasharray: 0.008 0.992;
+  stroke-dashoffset: 0.5;
+  animation: world-flow var(--world-flow-duration, 8s) linear infinite;
+  animation-delay: var(--world-flow-delay, 0s);
+  animation-play-state: paused;
+}
+
+.world-particle-halo { opacity: 0.34; }
+.world-particle-core { opacity: 0.9; }
+
+.world-star-glow {
+  animation: world-glow-breathe 5800ms ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.world-star-inner-glow {
+  animation: world-inner-breathe 5800ms ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.world-star-rays {
+  animation: world-rays-breathe 5800ms ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+/* The line arrival is retained after its first viewport appearance. */
+.world-has-arrived .world-connection {
+  animation: world-draw 1300ms cubic-bezier(0.25, 0.6, 0.35, 1) both;
+  animation-delay: var(--world-delay, 0ms);
+  animation-play-state: paused;
+}
+
+.world-is-active .world-connection,
+.world-is-active .world-particle,
+.world-is-active .world-star-glow,
+.world-is-active .world-star-inner-glow,
+.world-is-active .world-star-rays {
+  animation-play-state: running;
+}
+
+.world-has-arrived.world-connections-complete .world-connection {
+  animation: none;
+  stroke-dashoffset: 0;
+}
+
+@keyframes world-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes world-flow {
+  0% { stroke-dashoffset: 1; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes world-glow-breathe {
+  0%, 100% { opacity: 0.4; transform: scale(0.98); }
+  50% { opacity: 0.6; transform: scale(1.035); }
+}
+
+@keyframes world-inner-breathe {
+  0%, 100% { opacity: 0.83; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.025); }
+}
+
+@keyframes world-rays-breathe {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 0.92; }
+}
+
+@media (max-width: 900px) {
+  .world-svg-labels { display: none; }
+  .world-challenges { display: grid; }
+}
+
+@media (max-width: 600px) {
+  .world-medallion { transform: scale(1.12); }
+
+  .world-challenges {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 18px;
+    margin-inline: 20px;
+  }
+
+  .world-challenge-problem { font-size: 16px; }
+}
+
+/* Pause renders the complete scene. No face or connection depends on motion. */
+html.motion-paused .world-connection,
+html.motion-paused .world-particle,
+html.motion-paused .world-star-glow,
+html.motion-paused .world-star-inner-glow,
+html.motion-paused .world-star-rays {
+  animation: none !important;
+}
+
+html.motion-paused .world-connection { stroke-dashoffset: 0; }
+html.motion-paused .world-particle { stroke-dashoffset: 0.5; }
+html.motion-paused .world-star-glow { opacity: 0.48; transform: none; }
+html.motion-paused .world-star-inner-glow { opacity: 0.9; transform: none; }
+html.motion-paused .world-star-rays { opacity: 0.8; }
+
+@media (prefers-reduced-motion: reduce) {
+  .world-connection,
+  .world-particle,
+  .world-star-glow,
+  .world-star-inner-glow,
+  .world-star-rays {
+    animation: none !important;
+  }
+
+  .world-connection { stroke-dashoffset: 0; }
+  .world-particle { stroke-dashoffset: 0.5; }
+  .world-star-glow { opacity: 0.48; transform: none; }
+  .world-star-inner-glow { opacity: 0.9; transform: none; }
+  .world-star-rays { opacity: 0.8; }
+}

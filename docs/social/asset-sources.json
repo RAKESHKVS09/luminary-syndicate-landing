@@ -1,0 +1,93 @@
+{
+  "retrievedAt": "2026-10-12T23:28:25.843311+00:00",
+  "provider": "Font Awesome Free brands",
+  "assets": [
+    {
+      "filename": "instagram.svg",
+      "platform": "instagram",
+      "source": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.7.2/svgs/brands/instagram.svg",
+      "license": "CC BY 4.0",
+      "creator": "Fonticons, Inc. / Font Awesome Free",
+      "version": "6.7.2",
+      "bytes": 1213,
+      "sha256": "ed4cc22a7d9483ea8a651b095644f4bbdd4851d832daaea516f752ab6835ad16",
+      "validation": "SVG namespace, viewBox, path and attribution verified"
+    },
+    {
+      "filename": "linkedin.svg",
+      "platform": "linkedin",
+      "source": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.7.2/svgs/brands/linkedin.svg",
+      "license": "CC BY 4.0",
+      "creator": "Fonticons, Inc. / Font Awesome Free",
+      "version": "6.7.2",
+      "bytes": 715,
+      "sha256": "cd560ce8da99a254b1ea67f07a0da048c3e6e764146102160fc73fbab67d72b0",
+      "validation": "SVG namespace, viewBox, path and attribution verified"
+    },
+    {
+      "filename": "facebook.svg",
+      "platform": "facebook",
+      "source": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.7.2/svgs/brands/facebook.svg",
+      "license": "CC BY 4.0",
+      "creator": "Fonticons, Inc. / Font Awesome Free",
+      "version": "6.7.2",
+      "bytes": 559,
+      "sha256": "6906a171ddf36bf11fbb11b183bddfcf97bc58de068d6a43a5f4817b03bc9a09",
+      "validation": "SVG namespace, viewBox, path and attribution verified"
+    },
+    {
+      "filename": "x.svg",
+      "platform": "x",
+      "source": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.7.2/svgs/brands/x-twitter.svg",
+      "license": "CC BY 4.0",
+      "creator": "Fonticons, Inc. / Font Awesome Free",
+      "version": "6.7.2",
+      "bytes": 447,
+      "sha256": "d8cc9e7c9a70573422297556bd03c6d7e349cb84696fc50b042d0c2c342f52c4",
+      "validation": "SVG namespace, viewBox, path and attribution verified"
+    },
+    {
+      "filename": "youtube.svg",
+      "platform": "youtube",
+      "source": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.7.2/svgs/brands/youtube.svg",
+      "license": "CC BY 4.0",
+      "creator": "Fonticons, Inc. / Font Awesome Free",
+      "version": "6.7.2",
+      "bytes": 761,
+      "sha256": "652f1ec4169ebe810803fba8e8a22e993255794e68d8d9cca3bc61d34eec26ab",
+      "validation": "SVG namespace, viewBox, path and attribution verified"
+    },
+    {
+      "filename": "whatsapp.svg",
+      "platform": "whatsapp",
+      "source": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.7.2/svgs/brands/whatsapp.svg",
+      "license": "CC BY 4.0",
+      "creator": "Fonticons, Inc. / Font Awesome Free",
+      "version": "6.7.2",
+      "bytes": 1177,
+      "sha256": "5b2054497bf8bdc009569dcb19ec6c41a133e9d7e813aa9d18507edb33fedbe9",
+      "validation": "SVG namespace, viewBox, path and attribution verified"
+    },
+    {
+      "filename": "telegram.svg",
+      "platform": "telegram",
+      "source": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.7.2/svgs/brands/telegram.svg",
+      "license": "CC BY 4.0",
+      "creator": "Fonticons, Inc. / Font Awesome Free",
+      "version": "6.7.2",
+      "bytes": 993,
+      "sha256": "0aff9f342e7451a572fc88cb8716b13e03a2d29e9e97787a1d597f24acb323f9",
+      "validation": "SVG namespace, viewBox, path and attribution verified"
+    }
+  ],
+  "licenceFile": {
+    "filename": "LICENSE-Font-Awesome.txt",
+    "bytes": 7427,
+    "sha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc",
+    "source": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.7.2/LICENSE.txt"
+  },
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Font Awesome Free 6.7.2 by Fonticons, Inc.",
+  "modifications": "None. The x-twitter asset is saved as x.svg with its original contents.",
+  "trademarkCondition": "Brand marks represent their named platform. Their inclusion does not imply endorsement or affiliation."
+}
